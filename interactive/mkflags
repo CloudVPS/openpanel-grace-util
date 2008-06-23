@@ -1,5 +1,5 @@
 #!/bin/sh
-eval $(cat ../../src/libgrace/makeinclude | grep = | sed -e "s/ = /=\"/" | sed -e "s/$/\"/")
+eval $(cat makeinclude | grep = | sed -e "s/ = /=\"/" | sed -e "s/$/\"/")
 
 echo "#define INCLUDES \"$INCLUDES\"" > compilerflags.h
 echo "#define LIBS \"$LIBS\"" >> compilerflags.h

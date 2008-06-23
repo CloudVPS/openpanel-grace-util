@@ -1,6 +1,7 @@
 cxx
 grace
 gracepcre
+gracessl
 pthread
 libsocket
 libdl
