@@ -1,0 +1,23 @@
+#!/bin/sh
+cmd="$1"
+if [ "$cmd" = "configure" ]; then
+  shift
+fi
+
+find . -type d -mindepth 1 -maxdepth 1 | grep -v "\.hg" | while read projdir; do
+  cd "$projdir" || exit 1
+  if [ -z "$cmd" ]; then
+    echo "* Building $projdir"
+    make
+  else
+    if [ "$cmd" = "configure" ]; then
+      echo "* Configuring $projdir"
+      ./configure $*
+    else
+      echo "* Building target $1 in $projdir"
+      make $*
+    fi
+  fi
+  cd ..
+done
+
