@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml.schema>
+  <xml.class name="nl.madscience.tools.validate.conf">
+    <xml.type>dict</xml.type>
+    <xml.proplist>
+      <xml.member class="system" id="system"/>
+    </xml.proplist>
+  </xml.class>
+  <xml.class name="system">
+    <xml.type>dict</xml.type>
+    <xml.proplist>
+      <xml.member class="eventlog" id="eventlog"/>
+    </xml.proplist>
+  </xml.class>
+  <xml.class name="eventlog">
+    <xml.type>string</xml.type>
+  </xml.class>
+</xml.schema>

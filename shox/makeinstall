@@ -1,0 +1,9 @@
+#!/bin/sh
+tool_loc=$(grace where)
+if [ -z "$tool_loc" ]; then
+  echo "The 'grace' tool has not been installed into your PATH. Cannot install." >&2
+  exit 1
+fi
+
+install -m 755 shox "${tool_loc}/util-grace/shox"
+

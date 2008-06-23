@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nl.madscience.tools.validate.conf>
+  <system>
+    <eventlog>event.log</eventlog>
+  </system>
+</nl.madscience.tools.validate.conf>

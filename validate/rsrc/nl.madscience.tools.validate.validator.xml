@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grace.validator>
+  <datarule id="root">
+    <match.mandatory>
+      <mandatory type="child" key="system"/>
+    </match.mandatory>
+    <match.child>
+      <and>
+        <match.id>system</match.id>
+        <match.rule>system</match.rule>
+      </and>
+    </match.child>
+  </datarule>
+  
+  <datarule id="system">
+    <match.mandatory>
+      <mandatory type="child" key="eventlog"/>
+    </match.mandatory>
+    <match.child>
+      <match.id>eventlog</match.id>
+    </match.child>
+  </datarule>
+
+</grace.validator>
