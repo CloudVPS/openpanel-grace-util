@@ -2,7 +2,10 @@ include makeinclude
 
 OBJ	= main.o
 
-all: interactive
+all: compilerflags.h interactive
+
+compilerflags.h: makeinclude
+	./mkflags
 
 interactive: $(OBJ)
 	$(LD) $(LDFLAGS) -o interactive $(OBJ) $(LIBS)
